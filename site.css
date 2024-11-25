@@ -89,3 +89,97 @@ body {
 }
 
 
+.Ação {
+    color: #000000;
+    background-color: rgb(189, 0, 0);
+}
+
+
+.Animação {
+    color: #000000;
+    background-color: rgb(255, 223, 62);
+}
+
+
+.Aventura {
+    color: #000000;
+    background-color: rgb(233, 121, 1);
+}
+
+
+.Comédia {
+    color: #000000;
+    background-color: rgb(255, 223, 62);
+}
+
+
+.Drama {
+    color: #000000;
+    background-color: rgb(20, 25, 61);
+}
+
+
+.Fantasia {
+    color: #000000;
+    background-color: rgb(66, 34, 115);
+}
+
+
+.Ficção-Científica {
+    color: #000000;
+    background-color: rgb(46, 46, 219);
+}
+
+
+.Família {
+    color: #000000;
+    background-color:rgb(29, 198, 245);
+}
+
+
+.Guerra {
+    color: #000000;
+    background-color: #222020;
+}
+
+
+.História {
+    color: #000000;
+    background-color: rgb(5, 20, 69);
+}
+
+
+.Mistério {
+    color: #000000;
+    background-color: rgb(51, 8, 91);
+}
+
+
+.Musical {
+    color: #000000;
+    background-color: rgb(139, 0, 97);
+}
+
+
+.Romance {
+    color: #000000;
+    background-color: rgb(183, 1, 1);
+}
+
+
+.Suspense {
+    color: #000000;
+    background-color: #000000;
+}
+
+
+.Terror {
+    color: #000000;
+    background-color: rgb(70, 3, 3);
+}
+
+
+.Western {
+    color: #000000;
+    background-color: rgb(60, 35, 17);
+}
