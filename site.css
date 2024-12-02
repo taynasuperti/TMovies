@@ -51,6 +51,12 @@ a.nav-item.active {
 }
 
 
+ul {
+    list-style-type: none; /* Remove as bolinhas */
+    padding: 0; /* Remove o padding default */
+    margin: 0; /* Remove a margem default */
+  }
+
 
 .button-orange {
     background-color: #ff4400;

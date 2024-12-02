@@ -38,12 +38,13 @@ async function getMovie() {
         detalhes.innerHTML += `<button class='btn btn-lg button-orange me-2 ${genre.name}'>
         ${genre.name}</button>`
     })
-        
+
+
     // Busacar o Trailer
     let trailer;
     await fetch(`${baseUrl}${media}/${id}/videos?language=pt-br`, options)
         .then(res => res.json())
-        .then(res => trailer = res.results)
+        .then(res => trailer = res.results) // Armazena os trailers retornados
         .catch(err => console.log('Erro ao carregar trailers', err));
     // console.log(trailer);
 
