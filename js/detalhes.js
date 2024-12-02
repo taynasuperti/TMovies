@@ -35,10 +35,50 @@ async function getMovie() {
         <p>${movie.overview}</p>`;
     
     movie.genres.forEach(genre => {
-        detalhes.innerHTML += `<button class='btn btn-lg btn-outline-light me-2 ${genre.name}'>
+        detalhes.innerHTML += `<button class='btn btn-lg button-orange me-2 ${genre.name}'>
         ${genre.name}</button>`
     })
         
+    // Busacar o Trailer
+    let trailer;
+    await fetch(`${baseUrl}${media}/${id}/videos?language=pt-br`, options)
+        .then(res => res.json())
+        .then(res => trailer = res.results)
+        .catch(err => console.log('Erro ao carregar trailers', err));
+    // console.log(trailer);
 
+    if (trailer.length > 0) {
+        document.querySelector('iframe').src = `https://www.youtube.com/embed/${trailer[0].key}`
+    } else {
+        document.querySelector('#trailer').style.display = 'nome';
+    }
+
+    // Buscar o Elenco
+    let elenco;
+    await fetch(`${baseUrl}${media}/${id}/credits?language=pt-br`, options)
+        .then(res => res.json())
+        .then(res => elenco = res.cast)
+        .catch(err => console.log('Erro ao carregar elenco', err));
+    console.log(elenco); 
+    
+    let elencoContainer = document.querySelector('#elenco');
+    elencoContainer.innerHTML = '';
+    for (let i = 0; i < elenco.length; i++) {
+       let foto = elenco[i].profile_path ? `https://image.tmdb.org/t/p/original/${elenco[i].profile_path}`
+       : 'img/sem-foto.jpg';
+    elencoContainer.innerHTML +=
+        `<div class='col-lg-4 col-sm-6'>
+            <div class= 'row'>
+                <div class='col-lg-3 mb-3'>
+                    <img class="w-100 rounded-3" src="${foto}">
+                </div>
+                <div class= 'col-lg-9 mb-3'>
+                    <h4>${elenco[i].original_name}</h4>
+                    <p>${elenco[i].character}</p>
+                </div>
+            </div>    
+        </div>`;
+        
+    }
 
 }

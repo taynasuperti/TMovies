@@ -22,7 +22,7 @@ async function banner() {
             `<div class="carousel-item ${active}">
             <img src="https://image.tmdb.org/t/p/original/${trendings[i].backdrop_path}" class="d-block w-100" alt="...">
             <div class="carousel-caption">
-              <h3>${trendings[i].title ?? trendings[i].name}</h3>
+              <h3 class="text-orange">${trendings[i].title ?? trendings[i].name}</h3>
               <p class= "d-none d-md-block">${trendings[i].overview}</p>
             </div>
           </div>`;
@@ -62,10 +62,10 @@ containerTrendingMovies.addEventListener("mousemove", (e) => {
 
     if (mouseX < boundingRect.left + threshold) {
         scrollDirectionTrendingMovies = -1; // Scroll para a esquerda
-        containerTrendingMovies.style.cursor = "url('/img/arrow-left.png'), auto"; // Cursor para a esquerda
+        containerTrendingMovies.style.cursor = "url('/img/le2.png'), auto"; // Cursor para a esquerda
     } else if (mouseX > boundingRect.right - threshold) {
         scrollDirectionTrendingMovies = 1; // Scroll para a direita
-        containerTrendingMovies.style.cursor = "url('/img/arrow-right.png'), auto"; // Cursor para a direita
+        containerTrendingMovies.style.cursor = "url('/img/ld2.png'), auto"; // Cursor para a direita
     } else {
         scrollDirectionTrendingMovies = 0; // Parar scroll
         containerTrendingMovies.style.cursor = "pointer"; // Cursor padrão

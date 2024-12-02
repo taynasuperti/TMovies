@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TMovies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
+
+</head>
+
+<body>
+    <!-- Começa aqui a navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">TMovies</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pesquisar.html">Pesquisar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Termina aqui a navbar -->
+
+    <!-- Aqui começa os meus dados -->
+    <div class="container-fluid mt-5 py-3">
+        <div class="row">
+            <div class="col-md-3 p-1">
+                <img src="img/eu.jpeg" class="w-100 poster" alt="eu">
+            </div>
+
+            <div class="col-md-9 text-white" id="detalhes">
+                <h4 class="card-title espaco-titulo">Tayná Superti</h4>
+                <p>Sou uma desenvolvedora iniciante apaixonada por
+                    tecnologia e inovação. Sou movida pela curiosidade e pelo desejo de encontrar soluções criativas
+                    para os desafios do dia a dia. Fora do mundo da programação, amo ler diversos livros. Sempre em
+                    busca de algo novo, gosto de estar constantemente aprendendo, seja tentando entender uma cultura
+                    diferente, ou me aventurando em hobbies que me desafiem, como música ou culinária.
+                </p>
+                <h4>Meus dados pessoais</h4>
+                <div class="pessoais"></div>
+                <ul>
+                    <li><i class='bx bx-map' style='color:#ff8c00'></i> Barra Bonita, SP</li>
+                    <li><i class='bx bx-envelope' style='color:#ff8c00'></i> taynasuperti@gmail.com</li>
+                    <li><i class='bx bxl-whatsapp' style='color:#ff8c00'></i> (14) 99154-6738</li>
+                </ul>
+                <h4><i class='bx bxs-graduation' style='color:#ff8c00'></i> Formação Acadêmica</h4>
+                <div class="curso">
+                    <p class="nome-curso">
+                        <i class='bx bx-briefcase' style='color:#ff8c00'></i>
+                        Curso Técnico em Administração
+                    <p class="data">
+                        <i class='bx bx-calendar' style='color:#ff8c00'></i>
+                        Ago 2023 - <span class="final">Dez 2024</span>
+                    </p>
+                    <i class='bx bx-briefcase' style='color:#ff8c00'></i>
+                    Curso Técnico em Informática
+                    <p class="data">
+                        <i class='bx bx-calendar' style='color:#ff8c00'></i>
+                        Ago 2024 - <span class="final">Jul 2025</span>
+                    </p>
+
+            </div>
+        </div>
+
+        
+
+    </div>
+    <!-- Aqui termina os meus dados -->
+
+    <!-- Aqui começa o objetivo do projeto -->
+    <div class="container-fluid mt-5 py-3">
+        <div class="row">
+            <div class="col-md-3 p-1">
+
+            </div>
+            <h4 class="card-title espaco-titulo">Qual é o objetivo do projeto e como ele foi feito?</h4>
+            <div class="col-md-8 text-white" id="detalhes">Este projeto foi desenvolvido com o objetivo de
+                criar uma plataforma informativa para a apresentação de filmes e séries, utilizando HTML, CSS e
+                JavaScript.
+                A principal proposta é proporcionar aos usuários uma experiência simples e eficiente ao procurar e
+                visualizar
+                informações sobre filmes e séries de forma dinâmica e atraente.
+                
+                <p>O projeto busca integrar dados de filmes e séries retirados de uma API externa, sendo ela a The Movie
+                    Database API
+                    para apresentar informações detalhadas sobre cada item, incluindo:
+                <p>Título;</p>
+                <p>Descrição;</p>
+                <p>Gênero;</p>
+                <p>Imagem de capa;</p>
+                <p>Data de lançamento;</p>
+                <p>Trailers.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Aqui termina o objetivo do projeto -->
+    <footer>
+        <h3 class="card-title espaco-titulo">Siga-me nas redes sociais!</h3>
+        <a href="https://github.com/taynasuperti?tab=repositories" target="_blank" title="GitHub">
+            <i class='bx bxl-github' style='color:#ff8c00'></i>
+        </a>
+        <a href="https://www.facebook.com/tayna.carolina/" target="_blank" title="Facebook">
+            <i class='bx bxl-facebook-circle' style='color:#ff8c00'></i>
+        </a>
+        <a href="https://www.instagram.com/tayna_superti/" target="_blank" title="Instagram">
+            <i class='bx bxl-instagram' style='color:#ff8c00'></i>
+        </a>
+        <a href="https://br.linkedin.com/in/tayn%C3%A1-superti-840443338" target="_blank" title="Linkedin">
+            <i class='bx bxl-linkedin-square' style='color:#ff8c00'></i>
+        </a>
+    </footer>

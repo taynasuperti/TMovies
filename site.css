@@ -1,14 +1,99 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 * { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body {
     font-family: 'Ubuntu', sans-serif;
     background-color: #000000;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
+
+#detalhes h1 {
+    font-family: "Bungee Spice", sans-serif;
+}
+
+
+.navbar {
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+
+h3 {
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+h4 {
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+h5 b {
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+p b {
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+
+.a {
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+
+a.nav-item.active {
+    color: #ffffff !important;
+    font-weight: 800;
+}
+
+
+
+.button-orange {
+    background-color: #ff4400;
+    color: #ffffff;
+}
+
+
+.imagem-com-padding {
+    padding: 10px; /* Adiciona 10px de espaçamento entre a borda da imagem e o conteúdo da imagem */
+    width: 20%; 
+    height: auto; 
+}
+
+
+.container {
+    padding-left: 15px;  /* Ajusta a distância da borda esquerda */
+    padding-right: 15px; /* Ajusta a distância da borda direita */
+  }
+  
+  .row {
+    margin-left: 0;
+    margin-right: 0; /* Remove margens extras da row */
+  }
+  
+  .poster {
+    object-fit: cover; /* Garantir que a imagem preencha sem distorcer */
+    border-radius: 10px;
+  }
+  
+  .card-title {
+    margin-top: 0; /* Remove o espaço extra no topo do título */
+    font-size: 1.5rem;
+  }
+  
+  #detalhes p {
+    margin-top: 0; /* Remove o espaço extra no topo do parágrafo */
+  }
+
+
+.espaco-titulo {
+    padding: 12px;
+}
+
 
 .navbar {
     backdrop-filter: blur(2px);
@@ -16,12 +101,14 @@ body {
 }
 
 .navbar .navbar-brand {
-    color: #ffffff;
+    color: #ff8c00;
     font-weight: bold;
+    font-family: 'Bungee Spice', sans-serif;
 }
 
 .navbar .nav-item .nav-link {
-    color: #ffffff;
+    color: #ff8c00;
+    font-family: 'Bungee Spice', sans-serif;
 }
 
 .scrolled {
@@ -47,7 +134,6 @@ body {
 }
 
 .carousel-caption h3 {
-    color: #ffffff;
     font-weight: bolder;
     font-size: 32px;
 }
@@ -89,97 +175,31 @@ body {
 }
 
 
-.Ação {
-    color: #000000;
-    background-color: rgb(189, 0, 0);
+.text-orange {
+    color: #ff8c00;
 }
 
 
-.Animação {
-    color: #000000;
-    background-color: rgb(255, 223, 62);
+#pesquisar input[type=text] {
+    padding: 15px 20px;
+    font-weight: 600;
+    background-color: #ffffff;
+    border-radius: 50px;
+    width: 100%;
+    font-size: 18px;
+    border: #ff8c00 solid 2px;
 }
 
 
-.Aventura {
-    color: #000000;
-    background-color: rgb(233, 121, 1);
+#pesquisar button {
+    padding: 12px;
+    font-size: 20px;
+    top: 1px;
+    right: 0;
+    border-radius: 50%;
+    width: 60px;
+    border: #ff8c00 solid 2px;
+    background-color: #ff8c00;
+    color: #ffffff;
 }
 
-
-.Comédia {
-    color: #000000;
-    background-color: rgb(255, 223, 62);
-}
-
-
-.Drama {
-    color: #000000;
-    background-color: rgb(20, 25, 61);
-}
-
-
-.Fantasia {
-    color: #000000;
-    background-color: rgb(66, 34, 115);
-}
-
-
-.Ficção-Científica {
-    color: #000000;
-    background-color: rgb(46, 46, 219);
-}
-
-
-.Família {
-    color: #000000;
-    background-color:rgb(29, 198, 245);
-}
-
-
-.Guerra {
-    color: #000000;
-    background-color: #222020;
-}
-
-
-.História {
-    color: #000000;
-    background-color: rgb(5, 20, 69);
-}
-
-
-.Mistério {
-    color: #000000;
-    background-color: rgb(51, 8, 91);
-}
-
-
-.Musical {
-    color: #000000;
-    background-color: rgb(139, 0, 97);
-}
-
-
-.Romance {
-    color: #000000;
-    background-color: rgb(183, 1, 1);
-}
-
-
-.Suspense {
-    color: #000000;
-    background-color: #000000;
-}
-
-
-.Terror {
-    color: #000000;
-    background-color: rgb(70, 3, 3);
-}
-
-
-.Western {
-    color: #000000;
-    background-color: rgb(60, 35, 17);
-}
