@@ -1,6 +1,11 @@
+// Ao carregar a página executa as funções de buscar dados
+document.addEventListener("DOMContentLoaded", async () => {
+    toggleLoading();
+});
 
 document.getElementById('pesquisar').addEventListener('submit',async function(event) {
     event.preventDefault();
+    toggleLoading();
     let texto = this.querySelector('input[type="text"]').value;
     // console.log(texto);
 
@@ -24,5 +29,6 @@ document.getElementById('pesquisar').addEventListener('submit',async function(ev
     } else {
         qtdeResultados.innerHTML = `Nenhum Resultado Encontrado`
     }
+    toggleLoading();
 
 })

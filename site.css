@@ -117,6 +117,7 @@ ul {
     font-family: 'Bungee Spice', sans-serif;
 }
 
+
 .scrolled {
     background-color: #000;
 }
@@ -207,5 +208,23 @@ ul {
     border: #ff8c00 solid 2px;
     background-color: #ff8c00;
     color: #ffffff;
+}
+
+
+.loader {
+    position: absolute;
+    left: 43%;
+    top: 40%;
+    z-index: 100;
+    width: 200px;
+    height: 200px;
+    -webkit-animation: spin 2s linear infinite; /*Safari*/
+}
+
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
 }
 
