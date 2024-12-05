@@ -10,12 +10,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link src="https://cdn.uiverse.io/sdk.js">
+    </link>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="sobre.css">
     <link rel="stylesheet" href="site.css">
+
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="loading.css">
 
 </head>
 
 <body>
+
+    <div class="loader">
+        <div class="loading-text">
+            Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
+        </div>
+        <div class="loading-bar-background">
+            <div class="loading-bar">
+                <div class="white-bars-container">
+                    <div class="white-bar"></div>
+                    <div class="white-bar"></div>
+                    <div class="white-bar"></div>
+                    <div class="white-bar"></div>
+                    <div class="white-bar"></div>
+                    <div class="white-bar"></div>
+                    <div class="white-bar"></div>
+                    <div class="white-bar"></div>
+                    <div class="white-bar"></div>
+                    <div class="white-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Começa aqui a navbar -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container-fluid">
@@ -28,11 +60,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="sobre.html">Sobre</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="pesquisar.html">Pesquisar</a>
                     </li>
@@ -42,7 +78,7 @@
     </nav>
     <!-- Termina aqui a navbar -->
 
-    
+
 
     <!-- Aqui começa o objetivo do projeto -->
     <div class="container-fluid mt-5 py-3">
@@ -51,21 +87,34 @@
             <div class="col-md-3 p-1">
             </div>
             <h4 class="card-title espaco-titulo ">Qual é o objetivo do projeto e como ele foi feito?</h4>
-            <div class="col-md-8 text-white" id="detalhes"> O principal objetivo desse projeto é proporcionar aos usuários uma experiência simples e eficiente ao procurar e
-                visualizar
-                informações sobre filmes e séries de forma dinâmica e atraente.
-                Este projeto foi desenvolvido com o objetivo de
-                criar uma plataforma informativa para a apresentação de filmes e séries, utilizando HTML, CSS e
-                JavaScript.
-                <p>O projeto busca integrar dados de filmes e séries retirados de uma API externa, sendo ela a The Movie
-                    Database API
-                    para apresentar informações detalhadas sobre cada item, incluindo:
-                <p>Título;</p>
-                <p>Descrição;</p>
-                <p>Gênero;</p>
-                <p>Imagem de capa;</p>
-                <p>Data de lançamento;</p>
-                <p>Trailers.</p>
+            <div class="col-md-8 text-white" id="detalhes">
+                <p>O principal objetivo desse projeto é proporcionar aos usuários uma experiência simples e eficiente ao
+                    procurar e
+                    visualizar informações sobre filmes e séries de forma dinâmica e atraente.
+                    Este projeto foi desenvolvido com o objetivo de criar uma plataforma informativa para a apresentação
+                    de filmes e séries, utilizando HTML, CSS e JavaScript.
+                    O projeto busca integrar dados de filmes e séries retirados de uma API externa, sendo ela a The
+                    Movie Database API
+                    para apresentar informações detalhadas sobre cada item, incluindo: </p>
+
+                    <div class="my-4">
+                        <button class="btn btn-sm my-2 text-white btn-titulo">
+                            Título
+                        </button>
+                        <button class="btn btn-sm my-2 text-white btn-descricao">
+                            Descrição
+                        </button>
+                        <button class="btn btn-sm my-2 text-white btn-genero">
+                            Gênero
+                        </button>
+                        <button class="btn btn-sm my-2 text-white btn-data-de-lancamento">
+                            Data de lançamento
+                        </button>
+                        <button class="btn btn-sm my-2 text-white btn-trailers">
+                            Trailers
+                        </button>
+                
+
             </div>
         </div>
     </div>
@@ -109,26 +158,37 @@
                         Ago 2024 - <span class="final">Jul 2025</span>
                     </p>
 
+                </div>
             </div>
+
+
+
         </div>
+        <!-- Aqui termina os meus dados -->
 
-        
+        <footer>
+            <h3 class="card-title espaco-titulo">Siga-me nas redes sociais!</h3>
+            <a href="https://github.com/taynasuperti?tab=repositories" target="_blank" title="GitHub">
+                <i class='bx bxl-github' style='color:#ff8c00'></i>
+            </a>
+            <a href="https://www.facebook.com/tayna.carolina/" target="_blank" title="Facebook">
+                <i class='bx bxl-facebook-circle' style='color:#ff8c00'></i>
+            </a>
+            <a href="https://www.instagram.com/tayna_superti/" target="_blank" title="Instagram">
+                <i class='bx bxl-instagram' style='color:#ff8c00'></i>
+            </a>
+            <a href="https://br.linkedin.com/in/tayn%C3%A1-superti-840443338" target="_blank" title="Linkedin">
+                <i class='bx bxl-linkedin-square' style='color:#ff8c00'></i>
+            </a>
+        </footer>
 
-    </div>
-    <!-- Aqui termina os meus dados -->
+        <script src="js/site.js"></script>
+        <script src="js/sobre.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", async () => {
+                toggleLoading();
+            });
+        </script>
+</body>
 
-    <footer>
-        <h3 class="card-title espaco-titulo">Siga-me nas redes sociais!</h3>
-        <a href="https://github.com/taynasuperti?tab=repositories" target="_blank" title="GitHub">
-            <i class='bx bxl-github' style='color:#ff8c00'></i>
-        </a>
-        <a href="https://www.facebook.com/tayna.carolina/" target="_blank" title="Facebook">
-            <i class='bx bxl-facebook-circle' style='color:#ff8c00'></i>
-        </a>
-        <a href="https://www.instagram.com/tayna_superti/" target="_blank" title="Instagram">
-            <i class='bx bxl-instagram' style='color:#ff8c00'></i>
-        </a>
-        <a href="https://br.linkedin.com/in/tayn%C3%A1-superti-840443338" target="_blank" title="Linkedin">
-            <i class='bx bxl-linkedin-square' style='color:#ff8c00'></i>
-        </a>
-    </footer>
+</html>

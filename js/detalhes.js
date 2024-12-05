@@ -6,6 +6,7 @@
 // Ao carregar a página executa as funções de buscar os dados
 document.addEventListener("DOMContentLoaded", async () => {
     await getMovie();
+    toggleLoading();
 })
 
 async function getMovie() {
@@ -46,12 +47,12 @@ async function getMovie() {
         .then(res => res.json())
         .then(res => trailer = res.results) // Armazena os trailers retornados
         .catch(err => console.log('Erro ao carregar trailers', err));
-    // console.log(trailer);
+     //console.log(trailer);
 
     if (trailer.length > 0) {
         document.querySelector('iframe').src = `https://www.youtube.com/embed/${trailer[0].key}`
     } else {
-        document.querySelector('#trailer').style.display = 'nome';
+        document.querySelector('#trailer').style.display = 'none';
     }
 
     // Buscar o Elenco
@@ -60,7 +61,7 @@ async function getMovie() {
         .then(res => res.json())
         .then(res => elenco = res.cast)
         .catch(err => console.log('Erro ao carregar elenco', err));
-    console.log(elenco); 
+    //console.log(elenco); 
     
     let elencoContainer = document.querySelector('#elenco');
     elencoContainer.innerHTML = '';

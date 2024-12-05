@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     await banner ();
     await getTrendingsMovies();
+    toggleLoading();
 });
 
 async function banner() {
@@ -62,10 +63,10 @@ containerTrendingMovies.addEventListener("mousemove", (e) => {
 
     if (mouseX < boundingRect.left + threshold) {
         scrollDirectionTrendingMovies = -1; // Scroll para a esquerda
-        containerTrendingMovies.style.cursor = "url('/img/le2.png'), auto"; // Cursor para a esquerda
+        containerTrendingMovies.style.cursor = "url('/img/arrow-left-orange3.png'), auto"; // Cursor para a esquerda
     } else if (mouseX > boundingRect.right - threshold) {
         scrollDirectionTrendingMovies = 1; // Scroll para a direita
-        containerTrendingMovies.style.cursor = "url('/img/ld2.png'), auto"; // Cursor para a direita
+        containerTrendingMovies.style.cursor = "url('/img/arrow-right-orange3.png'), auto"; // Cursor para a direita
     } else {
         scrollDirectionTrendingMovies = 0; // Parar scroll
         containerTrendingMovies.style.cursor = "pointer"; // Cursor padrão
