@@ -13,15 +13,27 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
-    <link src="https://cdn.uiverse.io/sdk.js">
-    </link>
+    <link src="https://cdn.uiverse.io/sdk.js"></link>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="sobre.css">
     <link rel="stylesheet" href="site.css">
-
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="loading.css">
+
+    <style>
+        /* Animações GSAP */
+        .titulo-animado, .texto-animado, .btn-animado, .poster-animado {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: all 0.5s ease-out;
+        }
+
+        .titulo-animado.active, .texto-animado.active, .btn-animado.active, .poster-animado.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
 
 </head>
 
@@ -48,7 +60,7 @@
             </div>
         </div>
     </div>
-    <!-- Começa aqui a navbar -->
+
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">TMovies</a>
@@ -60,8 +72,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="sobre.html">Sobre</a>
@@ -69,7 +80,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="login.html">Login</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="perfil.html">Perfil</a> 
+                      </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pesquisar.html">Pesquisar</a>
                     </li>
@@ -77,45 +90,26 @@
             </div>
         </div>
     </nav>
-    <!-- Termina aqui a navbar -->
-
-
 
     <!-- Aqui começa o objetivo do projeto -->
     <div class="container-fluid mt-5 py-3">
         <div class="row">
-            <!-- Espaçamento à esquerda e à direita da tela -->
-            <div class="col-md-3 p-1">
-            </div>
-            <h4 class="card-title espaco-titulo ">Qual é o objetivo do projeto e como ele foi feito?</h4>
+            <div class="col-md-3 p-1"></div>
+            <h4 class="card-title espaco-titulo titulo-animado">Qual é o objetivo do projeto e como ele foi feito?</h4>
             <div class="col-md-8 text-white" id="detalhes">
-                <p>O principal objetivo desse projeto é proporcionar aos usuários uma experiência simples e eficiente ao
-                    procurar e
-                    visualizar informações sobre filmes e séries de forma dinâmica e atraente.
-                    Este projeto foi desenvolvido com o objetivo de criar uma plataforma informativa para a apresentação
-                    de filmes e séries, utilizando HTML, CSS e JavaScript.
-                    O projeto busca integrar dados de filmes e séries retirados de uma API externa, sendo ela a The
-                    Movie Database API
-                    para apresentar informações detalhadas sobre cada item, incluindo: </p>
+                <p class="texto-animado texto-alinhado">
+                    O objetivo deste projeto é criar um site que facilite a busca e a visualização de informações sobre filmes e séries. Utilizando HTML, CSS e JavaScript, a plataforma integra dados da API externa The Movie Database para apresentar informações detalhadas sobre cada item, incluindo:
+                </p>
 
-                    <div class="my-4">
-                        <button class="btn btn-sm my-2 text-white btn-titulo">
-                            Título
-                        </button>
-                        <button class="btn btn-sm my-2 text-white btn-descricao">
-                            Descrição
-                        </button>
-                        <button class="btn btn-sm my-2 text-white btn-genero">
-                            Gênero
-                        </button>
-                        <button class="btn btn-sm my-2 text-white btn-data-de-lancamento">
-                            Data de lançamento
-                        </button>
-                        <button class="btn btn-sm my-2 text-white btn-trailers">
-                            Trailers
-                        </button>
-                
-
+                <div class="my-4">
+                    <button class="btn btn-sm my-2 text-white btn-poster btn-animado">Poster</button>
+                    <button class="btn btn-sm my-2 text-white btn-titulo btn-animado">Título</button>
+                    <button class="btn btn-sm my-2 text-white btn-descricao btn-animado">Descrição</button>
+                    <button class="btn btn-sm my-2 text-white btn-genero btn-animado">Gênero</button>
+                    <button class="btn btn-sm my-2 text-white btn-data-de-lancamento btn-animado">Data de lançamento</button>
+                    <button class="btn btn-sm my-2 text-white btn-trailers btn-animado">Trailers</button>
+                    <button class="btn btn-sm my-2 text-white btn-elenco btn-animado">Elenco<button>
+                </div>
             </div>
         </div>
     </div>
@@ -125,71 +119,73 @@
     <div class="container-fluid mt-5 py-3">
         <div class="row">
             <div class="col-md-3 p-1">
-                <img src="img/eu.jpeg" class="w-100 poster" alt="eu">
+                <img src="img/eu.jpeg" class="w-100 poster poster-animado" alt="eu">
             </div>
 
             <div class="col-md-9 text-white" id="detalhes">
-                <h4 class="card-title espaco-titulo">Tayná Superti</h4>
-                <p>Sou uma desenvolvedora iniciante apaixonada por
-                    tecnologia e inovação. Sou movida pela curiosidade e pelo desejo de encontrar soluções criativas
-                    para os desafios do dia a dia. Fora do mundo da programação, amo ler diversos livros. Sempre em
-                    busca de algo novo, gosto de estar constantemente aprendendo, seja tentando entender uma cultura
-                    diferente, ou me aventurando em hobbies que me desafiem, como música ou culinária.
+                <h4 class="card-title espaco-titulo titulo-animado">Tayná Superti</h4>
+                <p class="texto-animado">
+                    Meu nome é Tayná, sou uma desenvolvedora em início de carreira com grande interesse por tecnologia e inovação. Tenho como principal motivação a curiosidade e a busca por soluções criativas que atendam às demandas e desafios do dia a dia. Acredito no aprendizado contínuo como ferramenta essencial para aprimorar habilidades e expandir conhecimentos, o que me leva a explorar novos horizontes, tanto no campo profissional quanto em interesses pessoais.
                 </p>
-                <h4>Meus dados pessoais</h4>
-                <div class="pessoais"></div>
-                <ul>
+
+                <h4 class="titulo-animado">Meus dados pessoais</h4>
+                <ul class="texto-animado">
                     <li><i class='bx bx-map' style='color:#ff8c00'></i> Barra Bonita, SP</li>
                     <li><i class='bx bx-envelope' style='color:#ff8c00'></i> taynasuperti@gmail.com</li>
                     <li><i class='bx bxl-whatsapp' style='color:#ff8c00'></i> (14) 99154-6738</li>
                 </ul>
-                <h4><i class='bx bxs-graduation' style='color:#ff8c00'></i> Formação Acadêmica</h4>
-                <div class="curso">
-                    <p class="nome-curso">
-                        <i class='bx bx-briefcase' style='color:#ff8c00'></i>
-                        Curso Técnico em Administração
-                    <p class="data">
-                        <i class='bx bx-calendar' style='color:#ff8c00'></i>
-                        Ago 2023 - <span class="final">Dez 2024</span>
-                    </p>
-                    <i class='bx bx-briefcase' style='color:#ff8c00'></i>
-                    Curso Técnico em Informática
-                    <p class="data">
-                        <i class='bx bx-calendar' style='color:#ff8c00'></i>
-                        Ago 2024 - <span class="final">Jul 2025</span>
-                    </p>
 
+                <h4 class="titulo-animado">Formação Acadêmica</h4>
+                <div class="curso texto-animado">
+                    <p class="nome-curso">
+                        <i class='bx bx-briefcase' style='color:#ff8c00'></i> Curso Técnico em Administração
+                    </p>
+                    <p class="data">
+                        <i class='bx bx-calendar' style='color:#ff8c00'></i> Ago 2023 - <span class="final">Dez 2024</span>
+                    </p>
+                    <p class="nome-curso">
+                        <i class='bx bx-briefcase' style='color:#ff8c00'></i> Curso Técnico em Informática
+                    </p>
+                    <p class="data">
+                        <i class='bx bx-calendar' style='color:#ff8c00'></i> Ago 2024 - <span class="final">Jul 2025</span>
+                    </p>
                 </div>
             </div>
-
-
-
         </div>
-        <!-- Aqui termina os meus dados -->
+    </div>
+    <!-- Aqui termina os meus dados -->
 
-        <footer>
-            <h3 class="card-title espaco-titulo">Siga-me nas redes sociais!</h3>
-            <a href="https://github.com/taynasuperti?tab=repositories" target="_blank" title="GitHub">
-                <i class='bx bxl-github' style='color:#ff8c00'></i>
-            </a>
-            <a href="https://www.facebook.com/tayna.carolina/" target="_blank" title="Facebook">
-                <i class='bx bxl-facebook-circle' style='color:#ff8c00'></i>
-            </a>
-            <a href="https://www.instagram.com/tayna_superti/" target="_blank" title="Instagram">
-                <i class='bx bxl-instagram' style='color:#ff8c00'></i>
-            </a>
-            <a href="https://br.linkedin.com/in/tayn%C3%A1-superti-840443338" target="_blank" title="Linkedin">
-                <i class='bx bxl-linkedin-square' style='color:#ff8c00'></i>
-            </a>
-        </footer>
+    <footer>
+        <h3 class="card-title espaco-titulo titulo-animado">Siga-me nas redes sociais!</h3>
+        <a href="https://github.com/taynasuperti?tab=repositories" target="_blank" title="GitHub">
+            <i class='bx bxl-github' style='color:#ff8c00'></i>
+        </a>
+        <a href="https://www.facebook.com/tayna.carolina/" target="_blank" title="Facebook">
+            <i class='bx bxl-facebook-circle' style='color:#ff8c00'></i>
+        </a>
+        <a href="https://www.instagram.com/tayna_superti/" target="_blank" title="Instagram">
+            <i class='bx bxl-instagram' style='color:#ff8c00'></i>
+        </a>
+        <a href="https://br.linkedin.com/in/tayn%C3%A1-superti-840443338" target="_blank" title="Linkedin">
+            <i class='bx bxl-linkedin-square' style='color:#ff8c00'></i>
+        </a>
+    </footer>
 
-        <script src="js/site.js"></script>
-        <script src="js/sobre.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", async () => {
-                toggleLoading();
+    <script src="js/site.js"></script>
+    <script src="js/sobre.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll('.titulo-animado, .texto-animado, .btn-animado, .poster-animado');
+            toggleLoading();
+            gsap.to(elements, {
+                opacity: 1,
+                x: 0,
+                duration: 1.0,
+                stagger: 0.3,
+                ease: 'power2.out'
             });
-        </script>
+        });
+    </script>
 </body>
 
 </html>

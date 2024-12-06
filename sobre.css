@@ -1,21 +1,43 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+.titulo-animado, .texto-animado, .btn-animado {
+    opacity: 0;
+    transform: translateX(-100px); /* Inicialmente fora da tela */
+}
+
+.texto-alinhado {
+    max-width: 700px; /* Igual ao do título */
+    text-align: justify; /* Justifica o texto, opcional */
+}
+
+
+.btn-poster {
+    background-color: #ff3300;
+}
 
 .btn-titulo {
-    background-color: aliceblue;
+    background-color: #ff4400;
 }
 
 .btn-descricao {
-    background-color: antiquewhite;
+    background-color: #ff5500;
 }
 
 .btn-genero {
-    background-color: aqua;
+    background-color: #ff6600;
 }
 
 .btn-data-de-lancamento {
-    background-color: aquamarine;
+    background-color: #ff7700;
 }
 
 .btn-trailers {
-    background-color: beige;
+    background-color: #ff8800;
+}
+
+.btn-elenco {
+    background-color: #ff9900;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
 }
