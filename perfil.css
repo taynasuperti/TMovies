@@ -1,16 +1,14 @@
 
 
 :root {
-    --blue-gradient-top: #2563eb;
-    --blue-gradient-bottom: #60a5fa;
-    --yellow-gradient-top: #eab308;
-    --yellow-gradient-bottom: #fde047;
-    --red-gradient-top: #dc2626;
-    --red-gradient-bottom: #f87171;
-    --cyan-gradient-top: #153b49;
-    --cyan-gradient-bottom: #155e75;
-    --green-gradient-top: #10b981;
-    --green-gradient-bottom: #6ee7b7;
+    --blue-gradient-top: #072d80;
+    --blue-gradient-bottom: #3369ac;
+    --yellow-gradient-top: #ffe600;
+    --yellow-gradient-bottom: #faea57;
+    --green-gradient-top: #175504;
+    --green-gradient-bottom: #288d0a;
+    --purple-gradient-top: #200124;
+    --purple-gradient-bottom: #410349;
   }
   *,
   *::before,
@@ -32,20 +30,6 @@
       var(--yellow-gradient-bottom) 100%
     );
   }
-  .red-gradient {
-    background: linear-gradient(
-      to bottom,
-      var(--red-gradient-top) 60%,
-      var(--red-gradient-bottom) 100%
-    );
-  }
-  .cyan-gradient {
-    background: linear-gradient(
-      to bottom,
-      var(--cyan-gradient-top) 50%,
-      var(--cyan-gradient-bottom) 100%
-    );
-  }
   .green-gradient {
     background: linear-gradient(
       to bottom,
@@ -53,6 +37,46 @@
       var(--green-gradient-bottom) 100%
     );
   }
+
+  .purple-gradient {
+    background: linear-gradient(
+      to bottom,
+      var(--purple-gradient-top) 60%,
+      var(--purple-gradient-bottom) 100%
+    );
+  }
+
+  .add-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px; /* Tamanho semelhante aos perfis */
+  height: 150px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.add-profile:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.add-profile-icon {
+  font-size: 60px; /* Aumenta o tamanho do ícone */
+  color: white; /* Cor do ícone */
+}
+
+.profile-name {
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
   
   body {
     position: relative;
@@ -188,6 +212,31 @@
     max-width: 90%;
     animation: fadeInWhileScalingDown 500ms forwards;
   }
+
+  .add-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px; /* Mesmo tamanho das outras divs */
+    height: 150px;
+    border-radius: 10px;
+    background: none; /* Remove o fundo */
+    cursor: pointer;
+    transition: none; /* Remove as transições */
+    box-shadow: none; /* Remove sombras, se houver */
+  }
+  
+  .add-profile:hover {
+    transform: none; /* Remove o efeito de escala */
+    background: none; /* Remove a mudança de fundo no hover */
+  }
+  
+  .add-profile-icon {
+    font-size: 60px; /* Mantém o tamanho do ícone */
+    color: white; /* Cor do ícone */
+  }
+  
   
   @keyframes fadeInWhileScalingDown {
     0% {
@@ -205,4 +254,7 @@
       border-color: #fff transparent transparent transparent;
     }
   }
+
+
+  
   
