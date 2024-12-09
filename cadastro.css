@@ -1,203 +1,157 @@
-/* From Uiverse.io by Praashoo7 */ 
-.form {
+/* Reset básico */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #141414;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contêiner principal */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Wrapper do formulário */
+.add-profile-wrapper {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.description {
+  font-size: 1rem;
+  color: #b3b3b3;
+  margin-bottom: 30px;
+}
+
+/* Avatar padrão */
+.profile-image {
+  margin-bottom: 20px;
+}
+
+.profile-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  border: 2px solid #333;
+}
+
+/* Campos do formulário */
+.add-profile-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-bottom: 0.4em;
-  background-color: #171717;
-  border-radius: 25px;
-  transition: .4s ease-in-out;
-}
-
-.form:hover {
-  transform: scale(1.05);
-  border: 1px solid black;
-}
-
-#heading {
-  text-align: center;
-  margin: 2em;
-  color: #ff4400;
-  font-size: 1.2em;
+  align-items: center;
 }
 
 .field {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5em;
-  border-radius: 25px;
-  padding: 0.6em;
-  border: none;
-  outline: none;
-  color: white;
-  background-color: #171717;
-  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
-.input-icon {
-  height: 1.3em;
-  width: 1.3em;
-  fill: #ff4400;
+.label {
+  font-size: 1rem;
+  color: #b3b3b3;
+  margin-bottom: 5px;
+  display: block;
 }
-
-
 
 .input-field {
-  background: none;
-  border: none;
-  outline: none;
   width: 100%;
-  color: #d3d3d3;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
 }
 
-.form .btn {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin-top: 2.5em;
+.input-field::placeholder {
+  color: #757575;
 }
 
-
-
-.button3 {
-  margin-bottom: 3em;
-  padding: 0.5em;
-  border-radius: 5px;
-  border: none;
+.input-field:focus {
+  border-color: #e50914;
   outline: none;
-  transition: .4s ease-in-out;
-  background-color: #252525;
-  color: white;
 }
 
-.button3:hover {
-  background-color: #ff4400;
-  color: white;
-}
-
-
-.loader {
-  position: absolute;
-  left: 43%;
-  top: 40%;
-  z-index: 100;
+/* Checkbox */
+.checkbox-label {
+  font-size: 1rem;
+  color: #b3b3b3;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 
-.loading-text {
+.checkbox-input {
+  width: 18px;
+  height: 18px;
+  accent-color: #e50914;
+}
+
+/* Botões */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.button-save {
+  flex: 1;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #e50914;
+  border: none;
+  border-radius: 4px;
   color: white;
-  font-size: 14pt;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-save:hover {
+  background-color: #f40612;
+}
+
+.button-cancel {
+  flex: 1;
   margin-left: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f40612;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 750;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
-.dot {
-  margin-left: 3px;
-  animation: blink 1.5s infinite;
-}
-.dot:nth-child(2) {
-  animation-delay: 0.3s;
+.button-cancel:hover {
+  background-color: #444;
 }
 
-.dot:nth-child(3) {
-  animation-delay: 0.6s;
+.titulo {
+ font-weight: 800;
+  color: #CC0202; /* Cor personalizada */
 }
 
-.loading-bar-background {
-  --height: 30px;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 5px;
-  width: 200px;
-  height: var(--height);
-  background-color: #212121 /*change this*/;
-  box-shadow: #0c0c0c -2px 2px 4px 0px inset;
-  border-radius: calc(var(--height) / 2);
-}
-
-.loading-bar {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  --height: 20px;
-  width: 0%;
-  height: var(--height);
-  overflow: hidden;
-  background: rgb(222, 74, 15);
-  background: linear-gradient(
-    0deg,
-    rgba(222, 74, 15, 1) 0%,
-    rgba(249, 199, 79, 1) 100%
-  );
-  border-radius: calc(var(--height) / 2);
-  animation: loading 4s ease-out infinite;
-}
-
-.white-bars-container {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.white-bar {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    -45deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 70%
-  );
-  width: 10px;
-  height: 45px;
-  opacity: 0.3;
-  rotate: 45deg;
-}
-
-@keyframes loading {
-  0% {
-    width: 0;
-  }
-  80% {
-    width: 100%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-/* Adicionando a animação ao form de login */
-@keyframes slideInFromLeft {
-0% {
-    transform: translateX(-100%);
-    opacity: 0;
-}
-100% {
-    transform: translateX(0);
-    opacity: 1;
-}
-}
-
-/* Aplica a animação ao card */
-.form {
-animation: slideInFromLeft 1s ease-out;
-}
 

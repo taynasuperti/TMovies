@@ -1,235 +1,183 @@
-/* From Uiverse.io by Praashoo7 */ 
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 0.4em;
-    background-color: #171717;
-    border-radius: 25px;
-    transition: .4s ease-in-out;
-  }
-  
-  .form:hover {
-    transform: scale(1.05);
-    border: 1px solid black;
-  }
-  
-  #heading {
-    text-align: center;
-    margin: 2em;
-    color: #ff4400;
-    font-size: 1.2em;
-  }
-  
-  .field {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
-    border-radius: 25px;
-    padding: 0.6em;
-    border: none;
-    outline: none;
-    color: white;
-    background-color: #171717;
-    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
-  }
-  
-  .input-icon {
-    height: 1.3em;
-    width: 1.3em;
-    fill: #ff4400;
-  }
-  
-  .input-field {
-    background: none;
-    border: none;
-    outline: none;
-    width: 100%;
-    color: #d3d3d3;
-  }
-  
-  .form .btn {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 2.5em;
-  }
-  
-  .button1 {
-    padding: 0.5em;
-    padding-left: 1.1em;
-    padding-right: 1.1em;
-    border-radius: 5px;
-    margin-right: 0.5em;
-    border: none;
-    outline: none;
-    transition: .4s ease-in-out;
-    background-color: #252525;
-    color: white;
-  }
-  
-  .button1:hover {
-    background-color: #ff4400;
-    color: white;
-  }
-  
-  .button2 {
-    padding: 0.5em;
-    padding-left: 2.3em;
-    padding-right: 2.3em;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    transition: .4s ease-in-out;
-    background-color: #252525;
-    color: white;
-  }
-  
-  .button2:hover {
-    background-color: #ff4400;
-    color: white;
-  }
-  
-  .button3 {
-    margin-bottom: 3em;
-    padding: 0.5em;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    transition: .4s ease-in-out;
-    background-color: #252525;
-    color: white;
-  }
-  
-  .button3:hover {
-    background-color: #ff4400;
-    color: white;
-  }
-
-
-  .loader {
-    position: absolute;
-    left: 43%;
-    top: 40%;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .loading-text {
-    color: white;
-    font-size: 14pt;
-    font-weight: 600;
-    margin-left: 10px;
-  }
-  
-  .dot {
-    margin-left: 3px;
-    animation: blink 1.5s infinite;
-  }
-  .dot:nth-child(2) {
-    animation-delay: 0.3s;
-  }
-  
-  .dot:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-  
-  .loading-bar-background {
-    --height: 30px;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 5px;
-    width: 200px;
-    height: var(--height);
-    background-color: #212121 /*change this*/;
-    box-shadow: #0c0c0c -2px 2px 4px 0px inset;
-    border-radius: calc(var(--height) / 2);
-  }
-  
-  .loading-bar {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    --height: 20px;
-    width: 0%;
-    height: var(--height);
-    overflow: hidden;
-    background: rgb(222, 74, 15);
-    background: linear-gradient(
-      0deg,
-      rgba(222, 74, 15, 1) 0%,
-      rgba(249, 199, 79, 1) 100%
-    );
-    border-radius: calc(var(--height) / 2);
-    animation: loading 4s ease-out infinite;
-  }
-  
-  .white-bars-container {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-  }
-  
-  .white-bar {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      -45deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0) 70%
-    );
-    width: 10px;
-    height: 45px;
-    opacity: 0.3;
-    rotate: 45deg;
-  }
-  
-  @keyframes loading {
-    0% {
-      width: 0;
-    }
-    80% {
-      width: 100%;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-  
-  @keyframes blink {
-    0%,
-    100% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-  }
-
-/* Adicionando a animação ao form de login */
-@keyframes slideInFromLeft {
-  0% {
-      transform: translateX(-100%);
-      opacity: 0;
-  }
-  100% {
-      transform: translateX(0);
-      opacity: 1;
-  }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+  transition:all .3s;
+  user-select:none;
+  text-decoration:none;
 }
 
-/* Aplica a animação ao card */
-.form {
-  animation: slideInFromLeft 1s ease-out;
+
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  overflow:hidden; background:url('https://assets.nflxext.com/ffe/siteui/vlv3/76c10fc9-7ccd-4fbf-bc59-f16a468921ca/4fb4af6e-d0ca-4c7f-b004-b34226727e55/IN-en-20230529-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+  background-size:cover;
+  position:relative;
 }
 
-  
+
+body:after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.60);
+  box-shadow:inset 0 0 20px #000,
+             inset 0 0 80px #000;
+}
+
+
+.logo{
+  width:120px;
+  position:absolute;
+  top:10px;
+  left:10px;
+  filter:drop-shadow(0 0 25px #000);
+}
+
+
+form{
+  width:350px;
+  background:rgba(0,0,0,.70);
+  padding:80px 40px;
+  color:#fff;
+}
+
+
+form h3{
+  color:#fff;
+  text-transform:capitalize;
+  font-size:1.8em;
+}
+
+
+form .inputbox{
+  margin:25px 0;
+  position:relative;
+}
+
+
+form .inputbox .msg{
+  font-size:.70em;
+  margin-top:5px;
+  color:#f00;
+}
+
+
+form .inputbox label{
+  position:absolute;
+  top:-10px;
+  right:8px;
+  padding:5px 15px;
+  width:auto;
+  font-size:.75em;
+  user-select:none;
+  color:#eee;
+  background:#CC0202;
+  border-radius:20px;
+}
+
+
+form .inputbox input{
+  border:none;
+  outline:none;
+  padding:15px 15px;
+  width:100%;
+  font-size:1em;
+  user-select:none;
+  outline:2px solid #CC0202;
+  border-radius:5px;
+  background:#111;
+  color:#fff;
+}
+
+
+form .inputbox input:focus{
+  background:#222;
+}
+
+
+
+
+form .submit{
+  width:100%;
+  border:none;
+  outline:none;
+  padding:15px 0;
+  font-size:1em;
+  text-transform:capitalize;
+  color:#eee;
+  background:#CC0202;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+
+form .submit:hover{
+  background:#222;
+  box-shadow:0 0 20px #000;
+}
+
+
+
+form .helpBox{
+  display:flex;
+  justify-content:space-between;
+  margin-top:25px;
+  color:#777;
+  font-size:.95em;
+}
+
+
+form .helpBox a{
+  color:#777;
+}
+
+
+form .helpBox a:hover{
+  text-decoration:underline;
+}
+
+
+form .sign{
+  margin:20px 0;
+  font-size:1.2em;
+  color:#666;
+}
+
+
+form .sign a{
+  color:#fff;
+}
+
+form .sign a:hover{
+  text-decoration:underline;
+}
+
+
+form .msg{
+  font-size:.75em;
+  color:#555;
+}
+
+
+.fa-youtube-play a:hover{
+  color:rgba(255,0,0,.75);
+}
+
+
+#rem{
+  accent-color:#CC0202;
+}
+
+.titulo {
+  font-weight: 800;
+   color: #CC0202; /* Cor personalizada */
+ }

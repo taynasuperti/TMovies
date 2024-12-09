@@ -1,0 +1,26 @@
+.nav-item {
+  position: relative;
+}
+
+.nav-item .nav-link {
+  color: #fff; /* Cor padrão do texto */
+  text-shadow: none; /* Remove qualquer sombra padrão */
+  transition: all 0.3s ease-in-out; /* Transição suave para hover e transformações */
+  transform: scale(1); /* Define o tamanho inicial como padrão */
+}
+
+.nav-item:hover .nav-link {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* Brilho ao passar o mouse */
+  transform: scale(1.1); /* Aumenta levemente o tamanho no hover */
+  color: #ffffff;  /* Cor do texto quando o mouse passa sobre */
+  text-decoration: none;
+}
+/* Estilo para o link selecionado */
+.nav-link.active {
+  text-shadow: 0 0 8px #ffffff; /* Brilho ao passar o mouse */
+             /* Adiciona um pequeno espaçamento ao redor da borda */
+}
+
+
+
+    
