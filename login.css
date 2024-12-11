@@ -67,7 +67,7 @@ form .inputbox{
 form .inputbox .msg{
   font-size:.70em;
   margin-top:5px;
-  color:#f00;
+  color:darkred;
 }
 
 
@@ -80,7 +80,7 @@ form .inputbox label{
   font-size:.75em;
   user-select:none;
   color:#eee;
-  background:#CC0202;
+  background:darkred;
   border-radius:20px;
 }
 
@@ -92,7 +92,7 @@ form .inputbox input{
   width:100%;
   font-size:1em;
   user-select:none;
-  outline:2px solid #CC0202;
+  outline:2px solid darkred;
   border-radius:5px;
   background:#111;
   color:#fff;
@@ -114,7 +114,7 @@ form .submit{
   font-size:1em;
   text-transform:capitalize;
   color:#eee;
-  background:#CC0202;
+  background:darkred;
   border-radius:5px;
   cursor:pointer;
 }
@@ -168,16 +168,26 @@ form .msg{
 }
 
 
-.fa-youtube-play a:hover{
-  color:rgba(255,0,0,.75);
-}
-
 
 #rem{
-  accent-color:#CC0202;
+  accent-color: darkred;
 }
 
 .titulo {
   font-weight: 800;
-   color: #CC0202; /* Cor personalizada */
+   color: darkred; /* Cor personalizada */
  }
+
+
+ .custom-btn {
+  background-color: darkred;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-btn:hover {
+  background-color: darkred;
+}

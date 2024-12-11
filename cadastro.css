@@ -86,7 +86,7 @@ body {
 }
 
 .input-field:focus {
-  border-color: #e50914;
+  border-color: darkred;
   outline: none;
 }
 
@@ -102,7 +102,7 @@ body {
 .checkbox-input {
   width: 18px;
   height: 18px;
-  accent-color: #e50914;
+  accent-color: darkred;
 }
 
 /* Botões */
@@ -117,7 +117,7 @@ body {
   flex: 1;
   margin-right: 10px;
   padding: 10px;
-  background-color: #e50914;
+  background-color: darkred;
   border: none;
   border-radius: 4px;
   color: white;
@@ -128,7 +128,7 @@ body {
 }
 
 .button-save:hover {
-  background-color: #f40612;
+  background-color: darkred;
 }
 
 .button-cancel {
@@ -136,7 +136,7 @@ body {
   margin-left: 10px;
   padding: 10px;
   text-align: center;
-  background-color: #f40612;
+  background-color: darkred;
   border-radius: 4px;
   color: #ffffff;
   font-weight: 750;
@@ -146,12 +146,12 @@ body {
 }
 
 .button-cancel:hover {
-  background-color: #444;
+  background-color: darkred;
 }
 
 .titulo {
  font-weight: 800;
-  color: #CC0202; /* Cor personalizada */
+  color: darkred; /* Cor personalizada */
 }
 
 

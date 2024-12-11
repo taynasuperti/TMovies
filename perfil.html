@@ -65,27 +65,17 @@
                 <a class="nav-link" href="sobre.html">Sobre</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a> 
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="perfil.html">Perfil</a> 
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="pesquisar.html">Pesquisar</a> 
               </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="login.html">Entrar</a>
+            </li>
             </ul>
           </div>
         </div>
       </nav>
     <!-- Termina aqui a navbar -->
 
-    <!-- Aqui começa a parte dos perfis dos usuários -->
-        <path
-          d="M567.903 77.112L600 162c-9.46-1.35-18.913-3.04-28.54-4.563l-18.082-46.904-18.578 43.032c-9.119-1.523-18.076-2.03-27.195-3.213l32.6-74.25L510.638 0h27.367l16.552 42.52L572.297 0h27.698l-32.092 77.112zM489.027 0h-24.832v147.15c8.108.508 16.55.842 24.832 1.852V0zm-46.286 145.46c-22.633-1.518-45.27-2.862-68.411-3.375V0h25.335v118.125c14.53.335 29.054 1.512 43.075 2.187v25.148zm-95.444-87.912v25.31H312.67V140.4h-24.994V0h70.946v25.31h-45.946v32.238h34.627-.006zM245.103 25.31v116.44c-8.449 0-17.06 0-25.34.335V25.31h-26.185V0h77.87v25.31h-26.345zm-78.887 58.892c-11.146 0-24.324 0-33.784.513v37.627c14.865-1.015 29.73-2.192 44.763-2.7v24.3l-70.098 5.573V0h70.092v25.31h-44.757V59.4c9.8 0 24.833-.508 33.784-.508v25.316-.006zM25.838 70.027v88.425C16.724 159.467 8.61 160.65 0 162V0h24.157l32.935 91.973V0h25.34v151.535c-8.95 1.523-18.075 2.03-27.702 3.375L25.838 70.027z"
-          fill="#E50914"
-        />
-      </svg>
-    </header>
     <main>
       <div class="container">
         <div class="animation-container">
@@ -125,18 +115,19 @@
               </div>
               <div class="profile-name">Cris</div>
             </div>
-            <div class="profile add-profile" onclick="window.location.href='cadastro.html'">
-              <div class="add-profile-icon style= font-size: 60px;">
+            <!-- Adicionar Perfil -->
+            <div class="add-profile">
+              <div class="add-profile-icon">
                 <i class="bi bi-plus-circle-fill"></i>
               </div>
               <div class="profile-name">Adicionar Perfil</div>
             </div>
           </div>
-          </div>
-          <button class="manage-profiles">GERENCIAR PERFIS</button>
+          <button class="manage-profiles" onclick="window.location.href='cadastro.html'">GERENCIAR PERFIS</button>
         </div>
       </div>
     </main>
+    
 
 
     <script src="js/site.js"></script>

@@ -54,9 +54,9 @@
   width: 150px; /* Tamanho semelhante aos perfis */
   height: 150px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
+  background: none;
   cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: none; /* Remove transições desnecessárias */
 }
 
 .add-profile:hover {
@@ -235,6 +235,9 @@
   .add-profile-icon {
     font-size: 60px; /* Mantém o tamanho do ícone */
     color: white; /* Cor do ícone */
+    transition: border 0.3s ease; /* Transição para a borda */
+    border: 2px solid transparent; /* Inicialmente, a borda é transparente */
+    padding: 5px; /* Espaço interno do ícone para evitar sobreposição da borda */
   }
   
   
